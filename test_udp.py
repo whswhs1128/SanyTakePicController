@@ -73,10 +73,10 @@ def take_picture():
 socket_init()
 
 for i in range(0,9999):
-  socket_send("313101")
+  socket_send(b'\x31\x31\x01')
   time.sleep(25)
   take_picture()
-  socket_send("313102")
+  socket_send(b'\x31\x31\x02')
   time.sleep(10)
 
 socket_uninit()
